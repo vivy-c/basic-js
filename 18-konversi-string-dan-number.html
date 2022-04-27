@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi string dan html</title>
+</head>
+
+<body>
+    <script>
+        /*
+        konversi string dan number 
+        parseInt = string ke numbr (bil.bulat)
+        parseFloat = string ke number(pecahan)
+        Number = string ke number (bil.bulat atau pecahan)
+        number.toString() = number ke string
+        */
+
+        const value1 = parseInt("1");
+        const value2 = 1;
+        const sum = value1 + value2;
+
+        document.writeln(`<p>${sum}</p>`);
+        document.writeln(`<p>${parseInt("1.9")}</p>`);
+        document.writeln(`<p>${parseFloat("1.1")}</p>`);
+        document.writeln(`<p>${Number("1.1")}</p>`);
+
+        const a = 1;
+        const b = 1;
+
+        const total1 = a.toString() + b.toString();
+
+        document.writeln(`<p>${total1}</p>`);
+
+        document.writeln(`<p>${parseInt("salah")}</p>`); //NaN (Not a Number)
+        document.writeln(`<p>${parseFloat("1.1vivy")}</p>`); //1.1 (parse masih mentolerir apabila kesalahannya ada dibelakang)
+
+        document.writeln(`<p>${Number("1salah")}</p>`); //NaN (Not a Number)
+        document.writeln(`<p>${Number("1.1vivy")}</p>`); //Number tidak mentolerir kalau ada stringnya
+
+        //NaN apabila dioperasikan dg data apapun hasilnya akan tetap NaN
+        const first = Number("salah"); //NaN
+        const totalNumber = first + 100;
+
+        document.writeln(`<p>Total Number : ${totalNumber}</p>`);
+
+        //isNaN untuk ngecek suatu value itu NaN atau bukan
+        document.writeln(`<p>First isNaN : ${isNaN(first)}</p>`);
+        document.writeln(`<p>100 isNaN : ${isNaN(100)}</p>`);
+
+
+    </script>
+</body>
+
+</html>
