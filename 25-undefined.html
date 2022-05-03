@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined</title>
+</head>
+
+<body>
+    <script>
+        /*
+        undefined => kata kunci di js
+        undefined => sebuah tipe data
+        variable yg belum ditambahkan nilai => tipe undefined
+        undefined /= null
+        */
+
+        //UNDEFINED VARIABLE VALUE
+        let name;
+        //name = "Vivy";
+        if (name === undefined) {
+            console.info("UNDEFINED"); //kalo baru declare varnya tapi belum ada isinya
+        } else {
+            console.info("DEFINED");
+        }
+
+        //UNDEFINED ARRAY VALUE
+        const names = ["Vivy", "Cahyani"];
+        //names[1] = undefined; //mirip seolah value index ini dihapus
+        if (names[2] === undefined) {
+            //alert("Hello World");
+            console.info("ARRAY UNDEFINED");
+        } else {
+            //alert(`Hello ${names[2]}`);
+            console.info("ARRAY DEFINED");
+        }
+
+        //UNDEFINED OBJECT PROPERTY
+        let person = {
+            //name: "Vivy"
+        };
+        if (person.name === undefined) {
+            alert("Hello World");
+            console.info("OBJECT UNDEFINED");
+        } else {
+            alert(`Hello ${person.name}`);
+            console.info("OBJECT DEFINED");
+        }
+    </script>
+</body>
+
+</html>
