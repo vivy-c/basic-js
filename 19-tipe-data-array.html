@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Array</title>
+</head>
+
+<body>
+    <script>
+        //tipe data array nga fixed nga harus dideskripsi panjangnya diawal
+        let arrayKosong = [];
+
+        //let arrayNama = ["Vivy","Cahyani","Oreo","Cimeng", 1 , true];
+        let arrayNama = ["Vivy", "Cahyani", "Oreo", "Cimeng"];
+        //array disimpan berurutan sesuai index dan dimuali dari 0 apabila nambah value baru maka masuk ke index yang terakhir
+
+
+        /*
+        Operasi pada array :
+        array.push(value) => nambah data ke array
+        array.length => get panjang array
+        array[index] => get data di posisi index
+        array[index] = value => mengubah data di posisi index
+        delete array[index] => hapus data di posisi index, namun index tidak bergeser
+        */
+
+
+        //menambah data paad array bisa menggunakan push
+        const names = [];
+        names.push("Vivy");
+        names.push("Cahyani", "Cimeng");
+        names.push("Lamelo", "Ball");
+
+        console.table(names);
+
+        //mengubah isi index pada array-> variablenya apa index keberapa dan mau diganti jadi apa
+        names[0] = "Budi";
+
+        console.table(names);
+
+        console.info(names[0]);
+        console.info(names[1]);
+        console.info(names[2]);
+
+        names[0] = "Aku";
+        names[1] = "Ini";
+        names[2] = "Crushnya";
+
+        console.table(names);
+
+        //menghapus data pada array
+        delete names[1];
+
+        console.table(names);
+
+        //menambah data baru dengan push
+        names.push("Coba push");
+
+        console.table(names);
+
+        //menambah value lagi pada index yang tadi dihapus
+        names[1] = "Ini ( nambah ulang )";
+
+        console.table(names);
+        /*
+        * catatan :
+        * tidak ada batasan harus data apa (boleh sama maupun beda)
+        * bahkan kita dapat memasukkan array dalam array
+        */
+
+        //contoh push data array kedalam array (bahkan bisa 2 atau lebih dimensinya, jadi ada array didalam array)
+        names.push(["Coba", "Array"]);
+
+        console.table(names);
+
+        //contoh push data number
+        names.push(1, 2, 3);
+
+        console.table(names);
+
+    </script>
+</body>
+
+</html>
