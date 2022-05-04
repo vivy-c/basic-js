@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Typeof</title>
+</head>
+
+<body>
+    <script>
+        /*
+        typeof utk melihat tipe data sebuah value atau variable
+        krna js = dynamic language jd perlu cek tip data sebuah value menggunakan type of
+        Hasil dari operator typeof adalah string tipe datanya
+        Type -> Hasil operator typeof :
+        Undefined -> undefined
+        null -> object
+        boolean -> boolean
+        number -> number
+        bitint -> bigint
+        string -> string
+        symbol -> symbol
+        function -> function
+        lainnya -> object
+        */
+
+        let data = "Vivy";
+
+        const typeData = typeof data;
+        document.writeln(`<p>${typeData}</p>`);
+
+    </script>
+</body>
+
+</html>
