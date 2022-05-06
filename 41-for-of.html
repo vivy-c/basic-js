@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of</title>
+</head>
+
+<body>
+    <script>
+        /*
+        forn in untuk melakukan iterasi property atau index,
+        for of untuk melakukan iterasi terhadap isi value dari iterable object, seperti array, string dll
+        for of tidak dapat digunakan untuk iterasi data di object, karena object bukan iterable
+        */
+
+        //array
+        const names = ["Vivy", "Cahyani"];
+        for (const name of names) {
+            document.writeln(`<p>${name}</p>`);
+        }
+        //string
+        const fullName = "Vivy Cahyani";
+        for (const character of fullName) {
+            document.writeln(`<p>${character}</p>`);
+        }
+        //object (show error karena object tidak iterable)
+        // const person = {
+        //     firstName: "Vivy",
+        //     lastName: "Cahyani"
+        // };
+
+        // for (const property of person) {
+        //     document.writeln(`<p>${property} : ${person[property]}</p>`)
+        // }
+    </script>
+</body>
+
+</html>
