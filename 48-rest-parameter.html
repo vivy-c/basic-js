@@ -39,6 +39,19 @@
 
         const values = [10, 10, 10, 10, 10];
         sum('test array', ...values)
+
+        //arguments object
+        function oldSum() {
+            //console.info(arguments);
+            let total = 0;
+            for (const argument of arguments) {
+                total += argument;
+            }
+            document.writeln(`<p>Total ${total}</p>`);
+        }
+
+        oldSum(1, 2, 3, 4, 5);
+
     </script>
 </body>
 
