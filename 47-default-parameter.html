@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameter</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Default Parameter :
+        parameter itu optional = kita bisa tidak memberi value ke parameter
+        parameter juga bisa kita beri default value, artinya jika kita tidak
+        mengirim data ke parameter atau kita mengirim data undefined maka secara otomatis paameter akan diisi oleh default value
+        jadi mirip dengan fallback dan cocok untuk beberapa data yang mandatory
+        */
+        function register(name, gender = "UNKNOWN") {
+            console.info(name);
+            console.info(gender);
+        }
+
+        register("Vivy", "FEMALE");
+        register("Vivy");
+        register("Joko", undefined);
+        register("Budi", null); //kalo null di console jadi null karena null itu dianggap value null sedangkan undefined itu kososng atau nga ada valuenya
+    </script>
+</body>
+
+</html>
