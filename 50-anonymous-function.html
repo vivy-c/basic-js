@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function</title>
+</head>
+
+<body>
+    <script>
+        /*
+        anonymous function = membuat function tanpa nama
+        kita bisa buat anonymous function dalam sebuah variable atau bisa juga kita buat ketika mengisi parameter
+
+        */
+
+        //membuat anonymous function dengan memasukkan ke variable
+        let say = function (name) {
+            document.writeln(`<p>Hello ${name}</p>`);
+        }
+        say("Vivy");
+        say("Lamelo Ball");
+
+        //membuat anonymous function dengan memasukkan ke parameter
+        function giveMeName(callback) {
+            callback("Vivy");
+        }
+        giveMeName(function (name) {
+            document.writeln(`<p>Hellooowww ${name}</p>`)
+        });
+    </script>
+</body>
+
+</html>
