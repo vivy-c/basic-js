@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Function</title>
+</head>
+
+<body>
+    <script>
+        /*
+        function dalam function atau nested function
+        tidak ada batasan kita buat function dmna
+        termasuk ketika kita ingin membuat function didalam function
+        function yang terdapat didalam kita sebut inner function
+        inner function hanya dapat diakses dari luar functionnya 
+        */
+        //function dalam function
+        function outer() {
+            function inner() {
+                document.writeln(`<p>Inner</p>`);
+                console.info("Inner");
+            }
+            inner()
+            inner();
+        }
+        outer();
+        inner(); //ERROR can not access inner function
+    </script>
+</body>
+
+</html>
