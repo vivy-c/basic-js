@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <script>
+        /*
+
+        arrow function = alternatif pembuatan function yang lebih sederhana dari function biasanya
+        namun terdapat limitasi dan juga tidak dapat digunakan di semua situasi
+        dinamakan arrow function karena menggunakan tanda => (seperti panah)
+        contoh beberapa kekurangan arrow function :
+        -tidak memiliki fitur arguments object
+        -tidak bisa menggunakan function generator
+        -tidak bisa mengakses this (yang nanti akan dibahas di function doi object)
+        -tidak bisa mengakses super (yang nanti akan dibahas di js OOP)
+        
+        Arrow function tanpa blok, syaratnya :
+        -jika arrow function isinya sederhana, misal hanya satu baris
+        -kita bisa membuat arrow function tanpa harus menggunakan block
+
+        Arrow function return value :
+        -jika menggunakan block, maka kita perlu menggunakan kata kunci return
+        -jika tidak menggunakan block, kita tidak perlu menggunakan kata kunci return
+        */
+
+        // membuat arrow function
+        const sayHello = (name) => {
+            const say = `Hello ${name}`;
+            console.info(say);
+        }
+        sayHello("Vivy");
+
+        // arrow function tanpa block
+        const sayHelloTanpaBlock = (name) => console.info(`Hellooowww ${name}`);
+
+        sayHelloTanpaBlock("Vivy Cahyani");
+
+        //arrow function return value
+        const sum = (first, second) => first + second;
+
+        console.info(sum(10, 10));
+
+        // arrow function tanpa kurung parameter
+        const sayHelo = name => console.info(`Hello ${name}`);
+
+        sayHello("Vivy C");
+
+        // arrow function sebagai parameter
+        function giveMeName(callback) {
+            callback("Vivy Cahyani");
+        }
+
+        giveMeName((name) => console.info(`Hello ${name}`));
+
+        // versi anonymous function
+        giveMeName(function (name) {
+            console.info(`Hello ${name}`);
+        });
+
+        //arrow function
+        giveMeName(name => console.info(`Helloooo ${name}`));
+    </script>
+</body>
+
+</html>
