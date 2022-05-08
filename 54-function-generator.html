@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+
+<body>
+    <script>
+        /*
+        function yang digunakan untuk membuat enerator
+        generator = data yg bisa di iterasi seperti array
+        membuat nya menggunakan tanda * setelah kata function
+        untuk mengembalikan data tiap iterasi bisa gunaan kata kunci yield diikuti datanya
+        
+        Lazy Evaluation : 
+        generator itu sifatnya lazy
+        jadi artinya jika data belum kita ambil dari generator, maka yield selanjutnya tidak akan dieksekusi
+        
+        */
+
+        // function generator sederhana
+        function* createNames() {
+            yield "Vivy";
+            yield "Cahyani";
+        }
+        console.info(createNames);
+        const names = createNames();
+        console.info(names[0]);
+        for (const name of names) {
+            console.info(name);
+        }
+
+        // function generator kompleks
+
+        // lazy
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`yield  ${i}`);
+                    yield i;
+                }
+
+            }
+        }
+
+        // eager 
+        function buatGanjilArray(value) {
+            const result = []
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`yield  ${i}`);
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        // lazy
+        const numbers = buatGanjil(100);
+        // for (const number of numbers) {
+        //     console.info(number);
+        // }
+
+        // eager
+        //const numbers = buatGanjilArray(100); // yang ini eager generator
+        // for (const number of numbers) {
+        //     console.info(number);
+        // }
+
+        //lazy
+        console.info(numbers.next().value);
+        console.info(numbers.next().value);
+        console.info(numbers.next().value);
+
+    </script>
+</body>
+
+</html>
