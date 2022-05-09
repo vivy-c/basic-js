@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Kunci This</title>
+</head>
+
+<body>
+    <script>
+
+        // this di global scope
+        console.info(this); // window
+
+        //this di function
+        function sample() {
+            console.info(this);
+
+            // this di inner function
+            function inner() {
+                console.info(this);
+            }
+            inner();
+        }
+
+        sample();
+
+        // this di object method
+        const person = {
+            name: "Vivy",
+
+            sayHello: function (value) {
+                //console.info(this);
+                //console.info(`Hellooo ${value} My name is ${name}`);
+                //console.info(`Hellooo ${value} My name is ${person.name}`);
+                console.info(`Hellooo ${value} My name is ${this.name}`); // this.(property)
+            }
+        };
+
+        person.sayHello("Budi");
+        person.sayHello("Joko");
+
+    </script>
+</body>
+
+</html>
