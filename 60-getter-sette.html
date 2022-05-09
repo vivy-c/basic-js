@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter dan Setter</title>
+</head>
+
+<body>
+    <script>
+        /*
+        getter = mengambil, setter = mengubah
+        */
+
+        // getter
+
+        //dengan function
+        // const person = {
+        //     firstName: "Vivy",
+        //     lastName: "Cahyani",
+        //     fullName: function () {
+        //         return `${this.firstName} ${this.lastName}`;
+        //     }
+        // };
+        // person.firstName = "Budi";
+        // console.info(person.fullName());
+
+        //dengan atribut seolah menjadi function atau getter
+        const person = {
+            firstName: "Vivy",
+            lastName: "Cahyani",
+            get fullName() {
+                return `${this.firstName} ${this.lastName}`;
+            },
+            // setter
+            set fullName(value) {
+                //console.info(`Ubah Full Name ${value}`)
+                const array = value.split(" ");
+                this.firstName = array[0];
+                this.lastName = array[1];
+            }
+        };
+        person.fullName = "Budi Nugraha";
+        console.table(person);
+        person.fullName = "Lamelo Ball";
+        console.table(person);
+
+
+    </script>
+</body>
+
+</html>
