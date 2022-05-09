@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masalah Variable Var</title>
+</head>
+
+<body>
+    <script>
+        /*
+        alasan var tidak direkomendasikan lagi dan diganti let :
+        karena var tidak memiliki blick scope artinya dia tidak mengikat ke local scope
+        karena masalah ini, var bisa tidadk terprediksi
+
+        */
+
+        //menggunakan let
+
+        // global scope
+        // let i = 20;
+
+        // for (let i = 0; i < 10; i++) {
+        //     // local scope
+        //     console.log(`Local : ${i}`);
+        // }
+        // console.info(`Global : ${i}`);
+
+        // menggunakan var 
+        var i = 20;
+
+        for (var i = 0; i < 10; i++) {
+            console.log(`Local : ${i}`);
+        }
+
+        // i yang globalnya seolah meng override dari perulangannya
+        // berbeda jika menggunakan let mendekarasi variabel yang sama di global dan di local scope dianggap berbeda
+        console.info(`Global : ${i}`);
+    </script>
+</body>
+
+</html>
