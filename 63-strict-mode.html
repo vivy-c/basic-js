@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Mode</title>
+</head>
+
+<body>
+    <script>
+        /*
+        secara default kode program kita berjalan pada mode tidak strict atau sloppy mood
+        pada ES5 dikenalkan strict mode :
+        mengubah beberapa silent error menjadi throw error
+        memperbaiki beberapa kesalahan engine js untuk optimalisasi
+        menolak beberapa kode perintah yang kedepannya akan digunakan di ES
+        
+        cara menyalakan strict mode :
+        pada baris awal js tambahkan `use strict`
+        atau bisa juga ditambahkan diawal function kita
+        */
+
+        function useStrictMode() {
+            'use strict'
+            const person = {
+                firstName: "Vivy"
+            }
+            // ERROR strict mode can not use with statement
+            with (person) {
+                console.info(firstName);
+            }
+
+        };
+        useStrictMode();
+    </script>
+</body>
+
+</html>
